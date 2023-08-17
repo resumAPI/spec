@@ -2,7 +2,7 @@
 the resumAPI spec
 
 ### About
-resumAPI is intended to facilitate effortless hiring and job applications. It does this by dropping all the glitz and glamour, and focusing instead on the data. The specification provides a standardized structure, primarily in JSON (although it is format agnostic), that allows individuals to publish their resume/CV data via a web API endpoint. An individual could self-host their their endpoint, or host it on platforms such as GitHub pages, enabling potential employers to retrieve their complete resume/CV using a format that remains consistent across applicants. Access to such endpoints can be restricted through single-use tokens, enabling the user to define the scope and time frame of access. Firms have the opportunity to simplify their job application processes, with the primary application process revolving around providing a valid resumAPI endpoint, ensuring structured, consistent data input that can easily be integrated into their systems. The key advantage is the standardization of data, enabling firms to effortlessly assimilate and process it. Individuals, too, benefit from streamlined job applications, which will reduce the stress of the job application process and enable them to apply to a wider range of opportunities.
+resumAPI is intended to facilitate effortless hiring and job applications. It does this by dropping all the glitz and glamour, and focusing instead on the data. The specification provides a standardized structure, primarily in JSON (although it is format agnostic), that allows individuals to publish their resume/CV data via a web API endpoint. An individual could self-host their their endpoint, or host it on platforms such as GitHub pages, enabling potential employers to retrieve their complete resume/CV using a format that remains consistent across applicants. Access to such endpoints can be restricted through temporary-use tokens, enabling the user to define the scope and time frame of access. Firms have the opportunity to simplify their job application processes, with the primary application process revolving around providing a valid resumAPI endpoint, ensuring structured, consistent data input that can easily be integrated into their systems. The key advantage is the standardization of data, enabling firms to effortlessly assimilate and process it. Individuals, too, benefit from streamlined job applications, which will reduce the stress of the job application process and enable them to apply to a wider range of opportunities.
 
 ### Resume Endpoints
 
@@ -113,5 +113,13 @@ Here is an example of a resume endpoint using JSON:
         }
     ]
 }
-
 ```
+
+### Processing Applications
+TBD. Instructions for how firms can process data pulled from resumAPI endpoints. It also involves useful notes on the structure of the database used to store this data.
+
+### Standardizing Data
+TBS. Instructions for implementation platforms describing how they can standardize data by creating predictable fields on an industry-by-industry basis - eg. academics can have specific fields made available to them to complete something more akin to a CV, while softwrae engineers can have a set of fields that allow them to better convey their projects and contributions. In addition, implementation platforms can standardize employer names and other parts of the data, making it easier for firms to query the resumAPI data they receive.
+
+### Security Considerations
+TBD. Instructions for implementation platforms to provide security options to users to protect their data by limiting access with temporary-use tokens, which can lock down access to specific firms, limit the number of times the data can be accessed using the token, and limit the time over which the token will be valid.
